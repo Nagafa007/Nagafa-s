@@ -178,7 +178,7 @@ public class Admin extends User {
 	// Approval System --> this occurs when the trading session is closed
 
 	// Deposit approval
-	public void approveDeposit(RegularUser user, double amount) {
+	public void approveDeposit(RegularUser user, double amount) {   // Nagafa //copy the whole method
 		Transaction peekTransaction = user.getPendingTransactions().get(0);
 		if (!tradingmanager.isTradingSessionOpen()) {
 			double newAccountBalance = user.getAccountBalance() + amount;
@@ -196,7 +196,7 @@ public class Admin extends User {
 
 	// Withdrawal approval
 
-	public void approveWithdrawal(RegularUser user, double amount) {
+	public void approveWithdrawal(RegularUser user, double amount) {    // Nagafa //copy the whole method
 		Transaction peekTransaction = user.getPendingTransactions().get(0);
 		if (!tradingmanager.isTradingSessionOpen()) {
 			double newAccountBalance = user.getAccountBalance() - amount;
