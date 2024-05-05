@@ -15,7 +15,7 @@ public class Transaction { // this class represents the StockOrder needed only w
 	private Operation opType;
 	private double amount;
 	private double price;
-	private boolean transactionApproved = false;
+	private boolean transactionApproved = false;      // Nagafa
 	private LocalDateTime Transactiontime; // record transaction time
 
 	Transaction(int userID, String stockLabel, Operation opType, double amount, double price) {
@@ -89,7 +89,7 @@ public class Transaction { // this class represents the StockOrder needed only w
 
 	// Override toString method for printing transaction details
 	@Override
-	public String toString() {
+	public String toString() {  // Nagafa     //copy the full method because i added to it 
 		String operation = opType == Operation.deposit ? "Deposit"
 				: opType == Operation.withdrawal ? "Withdrawal"
 						: opType == Operation.buy ? "Buy" : opType == Operation.sell ? "Sell" : "Unknown";
