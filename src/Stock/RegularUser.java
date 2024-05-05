@@ -23,7 +23,7 @@ public class RegularUser extends User {
 	public void deposit(double amount) { // deposit request
 		if (amount > 0) { // to be valid
 			Transaction depositTransaction = new Transaction(Operation.deposit, amount);
-			pendingTransactions.add(depositTransaction);
+			pendingTransactions.add(depositTransaction);  // Nagafa
 			System.out.println(" Deposit request submitted for approval ");
 		} else {
 			System.out.println(" Invalid deposit amount ");
@@ -34,7 +34,7 @@ public class RegularUser extends User {
 	public void withdrawal(double amount) {
 		if (amount > 0 && amount <= accountbalance) {
 			Transaction withdrawalTransaction = new Transaction(Operation.withdrawal, amount);
-			pendingTransactions.add(withdrawalTransaction);
+			pendingTransactions.add(withdrawalTransaction);   // Nagafa
 			System.out.println(" Withdrawal request submitted for approval ");
 		} else {
 			System.out.println(" Invalid withdrawal amount or insufficient funds ");
@@ -59,7 +59,7 @@ public class RegularUser extends User {
 		return this.pendingTransactions;
 	}
 
-	public void printTransactionHistory() {
+	public void printTransactionHistory() {                  // Nagafa
 		for (Transaction i : transactionsHistory) {
 			System.out.println(i.toString());
 		}
